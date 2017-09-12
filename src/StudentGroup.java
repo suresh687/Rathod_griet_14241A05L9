@@ -26,13 +26,15 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public Student[] getStudents(){
 		// Add your implementation here
-		return Arrays.copyOf(students, students.length);
+		//return Arrays.copyOf(students, students.length);
+                 return students;
 	}
 
 	@Override
 	public void setStudents(Student[] students){
 		// Add your implementation here
-               this.students= Arrays.copyOf(students, students.length);
+               //this.students= Arrays.copyOf(students, students.length);
+             this.students=students;
 	}
 
 	@Override
