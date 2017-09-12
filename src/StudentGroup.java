@@ -40,7 +40,8 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public Student getStudent(int index) {
 		// Add your implementation here
-		return students[index];
+		//students[index];
+               return null;
 	}
 
 	@Override
@@ -52,21 +53,25 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public void addFirst(Student student) {
 		// Add your implementation here
-                List<Object> a=new ArrayList<Object>(Arrays.asList(students));
+                
+List<Object> a=new ArrayList<Object>(Arrays.asList(students));
                 //ArrayList<Object> intial=new ArrayList<Object>();
                 //intial.add(student);
                 //Collections.addAll(intial,a);
                   a.add(0,student);
-                 Object[] students=a.toArray();
+                // Object[] students=a.toArray();
                      
- 	}
+ Student[] students=new Student[a.size()];
+                  students=a.toArray(students); 	}
 
 	@Override
 	public void addLast(Student student) {
 		// Add your implementation here
 ArrayList<Object> a=new ArrayList<Object>(Arrays.asList(students));
                   a.add(student);
-                 Object[] students=a.toArray();
+                // Object[] students=a.toArray();
+ Student[] students=new Student[a.size()];
+                  students=a.toArray(students);
                 
 	}
 
@@ -75,7 +80,8 @@ ArrayList<Object> a=new ArrayList<Object>(Arrays.asList(students));
 		// Add your implementation here
                ArrayList<Object> a=new ArrayList<Object>(Arrays.asList(students));
                   a.add(index,student);
-                  Object[] students=a.toArray();
+                  Student[] students=new Student[a.size()];
+                  students=a.toArray(students);
                 
 	}
 
@@ -84,7 +90,9 @@ ArrayList<Object> a=new ArrayList<Object>(Arrays.asList(students));
 		// Add your implementation here
             ArrayList<Object> a=new ArrayList<Object>(Arrays.asList(students));
                   a.remove(index);
-                  Object[] students=(Object[])a.toArray();
+ Student[] students=new Student[a.size()];
+                  students=a.toArray(students);
+                //  Object[] students=(Object[])a.toArray();
                 
      
 	}
@@ -95,7 +103,9 @@ ArrayList<Object> a=new ArrayList<Object>(Arrays.asList(students));
 ArrayList<Object> a=new ArrayList<Object>(Arrays.asList(students));
 int index=a.indexOf(student);
                  a.remove(index);
-Object[] students=(Object[])a.toArray();
+ Student[] students=new Student[a.size()];
+                  students=a.toArray(students);
+//Object[] students=(Object[])a.toArray();
 	}
 
 	@Override
